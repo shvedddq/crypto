@@ -1,17 +1,5 @@
 pragma solidity 0.6.10;
 
-// SPDX-License-Identifier: UNLICENSED
-
-/*
- * @dev Provides information about the current execution context, including the
- * sender of the transaction and its data. While these are generally available
- * via msg.sender and msg.data, they should not be accessed in such a direct
- * manner, since when dealing with GSN meta-transactions the account sending and
- * paying for execution may not be the actual sender (as far as an application
- * is concerned).
- *
- * This contract is only required for intermediate, library-like contracts.
- */
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
         return msg.sender;
@@ -25,10 +13,6 @@ abstract contract Context {
 
 // File: openzeppelin-solidity/contracts/token/ERC20/IERC20.sol
 
-/**
- * @title ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/20
- */
 interface IERC20 {
     function transfer(address to, uint256 value) external returns (bool);
 
@@ -49,10 +33,6 @@ interface IERC20 {
 
 // File: openzeppelin-solidity/contracts/math/SafeMath.sol
 
-/**
- * @title SafeMath
- * @dev Unsigned math operations with safety checks that revert on error
- */
 library SafeMath {
     /**
     * @dev Multiplies two unsigned integers, reverts on overflow.
